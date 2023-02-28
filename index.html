@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Styles/styles.css">
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+    <form action="/" class="container-principal" id="formulario">
+        <section class="container">
+            <section class="superior">
+                <div class="foto-perfil">
+                    
+                    <img src="Icons\perfil.png" alt="Perfil" id="visor" class="perfil-foto">
+                    
+                </div>
+                <div class="info">
+                    <div class="nombre-apellido">
+                        <label for="nombre" class="label">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Introduzca su Nombre" class="input input-nombre" required>
+                        <label for="apellido" class="label">Apellido</label>
+                        <input type="text" id="apellido" placeholder="Introduzca su Apellido" class="input input-apellido" required>
+                    </div>
+                    <div class="info-personal">
+                        <label for="dni" class="label">DNI</label>
+                        <input type="text" id="dni" placeholder="Introduzca su DNI" class="input input-dni" required>
+                        <label for="cuil" class="label">CUIL</label>
+                        <input type="text" id="cuil" placeholder="Introduzca su CUIL" class="input input-cuil" required>
+                        <label for="fecha" class="label">Fecha de Nacimiento</label>
+                        <input type="text" id="fecha" placeholder="DD/MM/AA" class="input input-fecha" required>
+                        <label for="nacionalidad" class="label">Nacionalidad</label>
+                        <input type="text" id="nacionalidad" placeholder="Introduzca su Nacionalidad" class="input input-nacionalidad" required>
+                    </div> 
+                </div>
+                <div class="contacto">
+                    <label for="telefono" class="label">Telefono</label>
+                    <input type="text" id="telefono" placeholder="Numero de telefono/celular" class="input input-telefono" required>
+                    <label for="mail" class="label">E-mail</label>
+                    <input type="text" id="mail" placeholder="Correo Electronico" class="input input-mail" required>
+                    <label for="direccion" class="label">Direccion</label>
+                    <input type="text" id="direccion" placeholder="Introduzca su direccion" class="input input-direccion" required>
+                    <label for="provincia" class="label">Provincia y codigo postal</label>
+                    <input type="text" id="provincia" placeholder="La Plata 1900" class="input input-provincia" required>
+                </div>
+            </section>
+            <section class="inferior">
+                <div class="izquierda">
+                    <div class="perfil-principal">
+                        <label for="perfil" class="label">Perfil</label>
+                        <textarea name="info-perfil" id="perfil" cols="40" rows="14" class="input input-perfil" required></textarea>
+                    </div>
+                </div>
+                <div class="derecha">
+                    <div class="habilidades-principal">
+                        <label for="habilidades" class="label">Hablidades</label>
+                        <textarea name="info-hablidades" id="habilidades" cols="30" rows="6" class="input input-habilidades" required></textarea>
+                    </div>
+                    <div class="action-habilidades">
+
+                    </div>
+                    <form action="/" class="experiencia-principal">
+                        <label for="experiencia" class="label">Experiencia</label>
+                        <textarea name="info-experiencia" id="experiencia" cols="30" rows="6" class="input input-experiencia" required></textarea>
+                    </form>
+                </div>
+            </section>
+        </section>
+        <section class="guard" id="botones-guardar">
+            <input type="submit" value="Guardar" class="btn btn-boton1" id="guardar">
+            <input type="submit" value="Modificar" class="btn btn-boton2" id="modificar">
+            <input type="submit" value="Borrar" class="btn btn-boton3" id="borrar">
+        </section>
+    </form>
+
+    <section class="container-secundario" id="visor-cv">
+        <section class="container" id="pdf-visual">
+            <section class="action-superior">
+                <div class="foto-perfil">
+                    <div id="visorArchivo" class="visor-perfil">
+                        <!--foto de perfil-->
+                    </div>
+                    <img src="Icons\perfil.png" alt="Perfil" id="visor2" class="perfil-foto">
+                    <input type="file" accept="image/*" id="archivoInput" class="col-md-offset-4 col-md-4" onchange="return validarExt()" />
+                </div>
+                <div class="action-info-principal">
+                    <div class="action-info">
+                        <div class="action-nom-ape">
+                            <strong id="nom"></strong>
+                            <strong id="esp"></strong>
+                            <strong id="ape"></strong>
+                        </div>
+                        <div class="action-datos">
+                            <div>
+                                <p>DNI: </p>
+                                <p id="var-dni"></p>
+                            </div>
+                            <div>
+                                <p>Cuil: </p>
+                                <p id="var-cuil"></p>
+                            </div>
+                            <div>
+                                <p>Fecha de Nacimiento: </p>
+                                <p id="var-fecha"></p>
+                            </div>
+                            <div>
+                                <p>Nacionalidad: </p>
+                                <p id="var-nacionalidad"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-contacto">
+                    <div>
+                        <div>
+                            <img src="Icons/telefono.png" alt="telefono" class="icon icon-telefono">
+                        </div>
+                        <p id="var-cel" class="var-cel"></p>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="Icons/email.png" alt="email" class="icon icon-mail">
+                        </div>
+                        <p id="var-mail" class="var-mail"></p>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="Icons/ubicacion.png" alt="Direccion" class="icon icon-ubicacion">
+                        </div>
+                        <p id="var-dire" class="var-dire"></p>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="Icons/bandera.png" alt="Provincia" class="icon icon-provincia">
+                        </div>
+                        <p id="var-prov" class="var-prov"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="inferior">
+                <div class="action-izquierda">
+                    <div class="action-perfil">
+                        <div>
+                            <div>
+                                <img src="Icons/usuario.png" alt="Perfil" class="icon2 icon-perfil">
+                            </div>
+                            <div>
+                                <h2 class="action-perfil-hijo">PERFIL</h2>
+                            </div>
+                        </div>
+                        <p id="var-perfil" class="action-perfil-texto"></p>
+                    </div>
+                </div>
+                <div class="action-derecha">
+                    <div class="action-experiencia">
+                        <div>
+                            <div>
+                                <img src="Icons/horas-laborales.png" alt="Experiencia" class="icon2 icon-expe">
+                            </div>
+                            <div>
+                                <h2 class="action-experiencia-hijo">EXPERIENCIA</h2>
+                            </div>
+                        </div>
+                        <p id="var-experiencia" class="var-experiencia-texto"></p>
+                    </div>
+                    <div class="action-habilidades">
+                        <div>
+                            <div>
+                                <img src="Icons/requisitos.png" alt="Habilidades" class="icon2 icon-hablidad">
+                            </div>
+                            <div>
+                                <h2 class="action-habilidades-hijo">HABILIDADES</h2>
+                            </div>
+                        </div>
+                        <p id="var-habilidades" class="var-habilidades-texto"></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="guard">
+            <button class="btn btn-boton6" id="modificar2">Modificar</button>
+            <button class="btn btn-boton5" id="guardar-pdf">Guardar PDF</button>
+        </div>
+    </section>
+    <script src="Scripts/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

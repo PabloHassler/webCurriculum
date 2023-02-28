@@ -1,0 +1,401 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 40px;
+}
+body {
+    margin: 0%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--sm);
+}
+.foto-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:start;
+    padding: 10px;
+
+}
+.perfil-foto {
+    max-width: 150px;
+    justify-content: center;
+    padding: 10px;
+}
+.visor-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:start;
+    padding-bottom: 10px;
+}
+.col-md-4 {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+}
+.col-md-4::before {
+    background-color: var(--very-light-pink);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Subir'; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.col-md-4 input[type="file"] {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+input {
+    background-color: var(--text-input-field);
+    border-radius: 5px;
+}
+textarea {
+    background-color: var(--text-input-field);
+    border-radius: 10px;
+}
+label {
+    padding-top: 10px;
+}
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.nombre-apellido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.info-personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: first baseline;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 10px;
+}
+.inferior {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    padding: 10px
+}
+.derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 
+}
+.perfil-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.habilidades-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.experiencia-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    background-color: var(--very-light-pink);
+    color: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--white);
+    font-family: 'Quicksand', sans-serif;
+    margin: 5px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+.btn:hover {
+    background-color: var(--hospital-green);
+    font-family: 'Quicksand', sans-serif;
+}
+.guard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-secundario {
+    display: none;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+}
+.action-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+.action-foto {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.action-nom-ape {
+    display: flex;
+    align-items: center;
+    font-size: var(--lg);
+    padding-top: 10px;
+    padding-bottom: 55px;
+}
+.action-nom-ape :nth-child(1) {
+    font-weight: bolder;
+    padding-right: 10px;
+}
+.action-datos :nth-child(n) {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.action-foto img {
+    align-items: center;
+    justify-content: center;
+}
+.action-info-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.action-info{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:self-start;
+    padding-bottom: 90px;
+}
+.action-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:self-start;
+}
+.action-datos div :nth-child(n) {
+    padding-right: 5px;
+}
+.action-info-personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.action-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:baseline;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.action-contacto :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+}
+.action-contacto :nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+.action-contacto :nth-child(3) {
+    display: flex;
+    flex-direction: row;
+}
+.action-contacto :nth-child(4) {
+    display: flex;
+    flex-direction: row;
+}
+.var-cel {
+    margin: 0;
+    border-bottom: solid 1px;
+    width: 200px;
+}
+.var-mail {
+    margin: 0;
+    border-bottom: solid 1px;
+    width: 200px;
+}
+.var-dire {
+    margin: 0;
+    border-bottom: solid 1px;
+    width: 200px;
+}
+.var-prov {
+    margin: 0;
+    border-bottom: solid 1px;
+    width: 200px;
+}
+.action-izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    align-items:baseline;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.action-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:baseline;
+    padding-left: 30px;
+}
+.action-perfil :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+}
+.action-perfil-hijo 
+{
+    width: 150px;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px;
+}
+.action-perfil-texto {
+    max-width: 250px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+.action-derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:baseline;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.action-habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:baseline;
+}
+.action-habilidades :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+}
+.action-habilidades-hijo {
+    width: 335px;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px;
+}
+.var-habilidades-texto {
+    max-width: 335px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding-left: 70px;
+}
+.action-experiencia {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:baseline;
+}
+.action-experiencia :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    
+}
+.action-experiencia-hijo {
+    width: 335px;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px;
+}
+.var-experiencia-texto {
+    max-width: 335px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding-left: 70px;
+}
+.icon {
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    padding: 5px;
+}
+.icon2 {
+    max-width: 50px;
+    justify-content: center;
+    padding: 10px;
+}
+@media (max-width: 600px) {
+    .superior {
+        flex-direction: column;
+    }
+    .inferior {
+        flex-direction: column;
+    }
+}
