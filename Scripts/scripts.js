@@ -216,6 +216,9 @@ function modificarDatos(){
 //Eliminar datos del formulario
 document.getElementById('borrar').addEventListener('click', () => borrarDatos())
 function borrarDatos(){
+    let formulario = document.getElementById('formulario');
+    formulario.reset();
+
     localStorage.removeItem("foto-perfil")
     localStorage.removeItem("nombre");
     localStorage.removeItem("apellido");
