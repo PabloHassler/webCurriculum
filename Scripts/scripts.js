@@ -234,7 +234,6 @@ function borrarDatos(){
 //Insertar los datos en el CV
 function insertar(){
     document.getElementById("nom").innerHTML = localStorage.getItem("nombre");
-    document.getElementById("esp").innerHTML = localStorage.getItem(" ");
     document.getElementById("ape").innerHTML = localStorage.getItem("apellido");
     document.getElementById("var-dni").innerHTML = localStorage.getItem("dni");
     document.getElementById("var-cuil").innerHTML = localStorage.getItem("cuil");
@@ -249,34 +248,3 @@ function insertar(){
     document.getElementById("var-experiencia").innerHTML = localStorage.getItem("experiencia");
     
 }
-//Generar pdf (uso la libreria html2pdf)
-document.addEventListener("DOMContentLoaded", () => {
-    // Escuchamos el click del botón
-    const $boton = document.querySelector("#guardar-pdf");
-    $boton.addEventListener("click", () => {
-        document.getElementById('visor2').style.display  = 'none';
-        const $elementoParaConvertir = document.getElementById("pdf-visual"); // <-- Aquí puedes elegir cualquier elemento del DOM
-        html2pdf()
-            .set({
-                margin: 0,
-                filename: 'Curriculum.pdf',
-                image: {
-                    type: 'jpg',
-                    quality: 0.98
-                },
-                html2canvas: {
-                    scale: 3, // A mayor escala, mejores gráficos, pero más peso
-                    letterRendering: true,
-                },
-                jsPDF: {
-                    unit: "in",
-                    format: 'letter',
-                    orientation: 'portrait' // landscape o portrait
-                }
-            })
-            .from($elementoParaConvertir)
-            .save()
-            .catch(err => console.log(err));
-
-    });
-});
