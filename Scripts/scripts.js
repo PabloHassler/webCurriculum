@@ -193,9 +193,6 @@ function modificarDatos(){
     var dni = document.getElementById('dni');
     var cuil = document.getElementById('cuil');
     var fecha = document.getElementById('fecha');
-    var resFecha = fecha.split("/");
-    var reversedFecha = resFecha.reverse(); 
-    var FechaOb = reversedFecha.join('-');
     var nacionalidad = document.getElementById('nacionalidad');
     var telefono = document.getElementById('telefono');
     var mail = document.getElementById('mail');
@@ -208,7 +205,10 @@ function modificarDatos(){
     apellido.value=localStorage.getItem('apellido');
     dni.value=localStorage.getItem('dni');
     cuil.value=localStorage.getItem('cuil');
-    fecha.value=localStorage.getItem('fecha');
+    var fechaSecundaria=localStorage.getItem('fecha');
+    var resFecha = fechaSecundaria.split("/");
+    var reversedFecha = resFecha.reverse(); 
+    fecha.value = reversedFecha.join('-');
     nacionalidad.value=localStorage.getItem('nacionalidad');
     telefono.value=localStorage.getItem('telefono');
     mail.value=localStorage.getItem('mail');
