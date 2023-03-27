@@ -43,7 +43,10 @@ function guardarDatos(){
     var apellido = document.getElementById('apellido').value;
     var dni = document.getElementById('dni').value;
     var cuil = document.getElementById('cuil').value;
-    var fecha = document.getElementById('fecha').value;
+    var fecha = document.getElementById("fecha").value;
+    var resFecha = fecha.split("-");
+    var reversedFecha = resFecha.reverse(); 
+    var FechaOb = reversedFecha.join('/');
     var nacionalidad = document.getElementById('nacionalidad').value;
     var telefono = document.getElementById('telefono').value;
     var mail = document.getElementById('mail').value;
@@ -162,7 +165,7 @@ function guardarDatos(){
         localStorage.setItem("apellido",apellido);
         localStorage.setItem("dni",dni);
         localStorage.setItem("cuil",cuil);
-        localStorage.setItem("fecha",fecha);
+        localStorage.setItem("fecha",FechaOb);
         localStorage.setItem("nacionalidad",nacionalidad);
         localStorage.setItem("telefono",telefono);
         localStorage.setItem("mail",mail);
@@ -190,6 +193,9 @@ function modificarDatos(){
     var dni = document.getElementById('dni');
     var cuil = document.getElementById('cuil');
     var fecha = document.getElementById('fecha');
+    var resFecha = fecha.split("/");
+    var reversedFecha = resFecha.reverse(); 
+    var FechaOb = reversedFecha.join('-');
     var nacionalidad = document.getElementById('nacionalidad');
     var telefono = document.getElementById('telefono');
     var mail = document.getElementById('mail');
